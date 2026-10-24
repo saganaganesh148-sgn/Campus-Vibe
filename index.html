@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CampusVibe | Event Universe</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <a href="#home" class="logo">CAMPUS<span>VIBE ✦</span></a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#events">Explore Events</a>
+            <a href="#my-events">My Universe</a>
+        </nav>
+
+        <a href="#events" class="nav-button">Explore ↗</a>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+                <p class="eyebrow">✦ YOUR CAMPUS, REIMAGINED</p>
+
+                <h1>
+                    Your next big thing is
+                    <span>out there.</span>
+                </h1>
+
+                <p class="description">
+                    Discover events. Find your people.
+                    Turn ordinary college days into extraordinary memories.
+                </p>
+
+                <a href="#events" class="primary-button">
+                    Explore the Universe ↗
+                </a>
+
+                <p class="hero-note">
+                    DISCOVER · CONNECT · EXPERIENCE
+                </p>
+            </div>
+
+            <div class="planet-area">
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+
+                <div class="planet">
+                    <span>✦</span>
+                </div>
+
+                <div class="floating-label">
+                    YOUR NEXT CHAPTER ✨
+                </div>
+            </div>
+
+        </section>
+
+        <section class="events-section" id="events">
+
+            <p class="eyebrow">FIND YOUR NEXT ADVENTURE</p>
+            <h2>Explore your <span>universe.</span></h2>
+
+            <p class="section-description">
+                Different interests. Different worlds. One campus.
+            </p>
+
+            <div class="filters">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search events..."
+                >
+
+                <select id="categoryFilter">
+                    <option value="All">All Categories</option>
+                    <option value="Technology">Technology</option>
+                    <option value="Cultural">Cultural</option>
+                    <option value="Workshop">Workshop</option>
+                    <option value="Sports">Sports</option>
+                </select>
+            </div>
+
+            <div class="event-grid" id="eventGrid"></div>
+
+            <p id="emptyMessage" hidden>
+                No events found. Try another search!
+            </p>
+
+        </section>
+
+        <section class="my-events" id="my-events">
+            <p class="eyebrow">YOUR PERSONAL COLLECTION</p>
+            <h2>My <span>Universe.</span></h2>
+            <p class="section-description">
+                The events you save will appear here.
+            </p>
+
+            <div class="event-grid" id="savedGrid"></div>
+            <p id="savedEmpty">Your universe is waiting. Save an event to begin!</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <a href="#home" class="logo">CAMPUS<span>VIBE ✦</span></a>
+        <p>Made for campus memories. © 2026</p>
+    </footer>
+
+    <dialog id="eventDialog">
+        <button id="closeDialog" class="close-button">✕</button>
+        <div id="eventDetails"></div>
+    </dialog>
+
+    <dialog id="registerDialog">
+        <button id="closeRegister" class="close-button">✕</button>
+
+        <p class="eyebrow">SAVE YOUR SPOT</p>
+        <h2>Join the <span>experience.</span></h2>
+
+        <form id="registrationForm">
+            <input type="hidden" id="selectedEvent">
+
+            <label for="studentName">Your name</label>
+            <input
+                id="studentName"
+                type="text"
+                placeholder="Enter your full name"
+                required
+            >
+
+            <label for="studentEmail">Email address</label>
+            <input
+                id="studentEmail"
+                type="email"
+                placeholder="Enter your email"
+                required
+            >
+
+            <label for="studentId">Student ID</label>
+            <input
+                id="studentId"
+                type="text"
+                placeholder="Enter your student ID"
+                required
+            >
+
+            <button type="submit" class="primary-button">
+                Confirm Registration ↗
+            </button>
+        </form>
+
+        <p id="registrationMessage" role="status"></p>
+        <p class="form-note">
+            Demo project: registrations are not sent to a server.
+        </p>
+    </dialog>
+
+</body>
+</html>
